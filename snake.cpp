@@ -26,6 +26,8 @@ class Snake {
             this->y = y;
 
             next = NULL;
+
+            cout << "test";
         }
 
         };
