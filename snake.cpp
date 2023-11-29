@@ -30,9 +30,13 @@ class Snake {
 
         };
 
-        Node *head, *tail;
+        
+
+        
 
     public:
+
+        Node *head, *tail; // These are public temporarily for tests.
 
         Snake () : head(0), tail(0) {} //Empty constructor initializes head and tail Node pointers to NULL.
 
