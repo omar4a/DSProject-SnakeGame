@@ -4,7 +4,6 @@ using namespace std;
 
 #include "snake.cpp";
 
-
 int headx, heady;
 
 int fruitx, fruity;
@@ -31,6 +30,7 @@ void move_head();
 
 void change_direction(char dir);
 
+void draw_map();
 
 int main(void){
 
@@ -64,10 +64,8 @@ snake.dequeue();
 
 }
 
-
 void move_head(){
 
-    snake.enqueue(headx, heady);
 
     if (direction1 == 0 && direction2 == 0)
 		headx++;
@@ -78,7 +76,6 @@ void move_head(){
 	else if (direction1 == 1 && direction2 == 1)
 		heady++;
 
-	
 	if (headx == fruitx && heady == fruity) {
 		score++;
 		grow();
@@ -100,5 +97,7 @@ fruity = rand() % height;
 }
 
 void grow(){}
+
+void draw_map(){}
 
 void change_direction(char dir){}

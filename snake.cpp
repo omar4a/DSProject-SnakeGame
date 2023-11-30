@@ -62,7 +62,7 @@ class Snake {
 
         }
 
-        void dequeue(){
+        void dequeue(){ // So far this has no use.
 
             if (empty()) {cerr << "Snake queue is empty. Cannot dequeue." << endl;}
 
@@ -80,7 +80,7 @@ class Snake {
             }
         }
 
-        void front(int& x, int& y){
+        int front(int& x, int& y){
 
             if (empty()) {cerr << "Snake queue is empty. Cannot return front." << endl;}
 
