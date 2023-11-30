@@ -8,18 +8,15 @@ class Snake {
 
         class Node {
 
-        /*Node class is declared inside the private section of the Snake class, so even though all of its data members
-        are public, it will not be accessible outside the Snake class. */
-
         public: 
 
         int x, y;
 
         Node *next;
 
-        Node() : x(0), y(0), next(0) {} // No-parameter constructor initializes data members to 0 and next pointer to NULL.
+        Node() : x(0), y(0), next(0) {}
 
-        Node (int x, int y){ //Parametered constructor initializes x & y positions
+        Node (int x, int y){
             
             this->x = x;
 
@@ -30,15 +27,11 @@ class Snake {
 
         };
 
-        
-
-        
-
     public:
 
         Node *head, *tail; // These are public temporarily for tests.
 
-        Snake () : head(0), tail(0) {} //Empty constructor initializes head and tail Node pointers to NULL.
+        Snake () : head(0), tail(0) {}
 
 
         bool empty(){
@@ -75,12 +68,11 @@ class Snake {
                 delete ptr;
 
                 if (empty()) {tail = NULL;}
-                //If we don't do this, then tail would be pointing to the node memory location we just deleted (garbage memory).
 
             }
         }
 
-        int front(int& x, int& y){
+        void front(int& x, int& y){
 
             if (empty()) {cerr << "Snake queue is empty. Cannot return front." << endl;}
 
